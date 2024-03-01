@@ -1,19 +1,24 @@
 plugins {
     id("java")
+    id("idea")
 }
 
 group = "net.njsharpe"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    compileOnly("org.spigotmc:spigot:1.20.2-R0.1-SNAPSHOT")
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks.processResources {
+    filesMatching("plugin.yml") {
+        expand("version" to project.version)
+    }
 }

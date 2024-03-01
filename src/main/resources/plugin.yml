@@ -1,0 +1,5 @@
+name: SlabsToBlocks
+main: net.njsharpe.slabstoblocks.SlabsToBlocks
+version: ${version}
+
+api-version: 1.20
