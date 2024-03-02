@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "net.njsharpe"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
